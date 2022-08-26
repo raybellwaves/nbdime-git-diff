@@ -1,0 +1,2 @@
+name: 'nbdime-git-diff'
+description: 'Clean git diff of Ipython notebooks using nbdime'
