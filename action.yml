@@ -1,5 +1,7 @@
 name: 'nbdime-git-diff'
 description: 'Cleaner git diff of Ipython notebooks using nbdime'
+runs:
+  using: 'ubuntu-latest'
 branding:
   icon: 'git-merge'  
   color: 'blue'
