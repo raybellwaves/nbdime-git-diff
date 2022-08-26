@@ -25,5 +25,5 @@ jobs:
       with:
         python-version: "3.9.13"
     - name: nbdime-git-diff
-      uses: raybellwaves/nbdime-git-diff@0.0.4
+      uses: raybellwaves/nbdime-git-diff@0.0.6
 ```
