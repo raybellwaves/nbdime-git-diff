@@ -3,23 +3,12 @@ description: 'Cleaner git diff of Ipython notebooks using nbdime'
 runs:
   using: "composite"
   steps:
-  - uses: actions/checkout@v3
-    with:
-      fetch-depth: 0
-  - name: Set up Python 3.9
-    uses: actions/setup-python@v3
-    with:
-      python-version: "3.9.13"
-  - name: Install dependencies
-    run: |
-      python -m pip install --upgrade pip
-      pip install nbdime ipython_genutils
-  - name: Configure nbdime
-    run: |
-      /opt/hostedtoolcache/Python/3.9.13/x64/bin/nbdime config-git --enable --global
-  - name: git diff
-    run: |
-      git diff HEAD^ HEAD
+    - run: pip install nbdime ipython_genutils
+      shell: bash
+    - run: nbdime config-git --enable --global
+      shell: bash
+    - run: git diff HEAD^ HEAD
+      shell: bash
 branding:
   icon: 'git-merge'  
   color: 'blue'
